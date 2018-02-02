@@ -1,0 +1,6 @@
+<div id="frame">
+    <div *ngFor="let item of items" class="menu-item" (click)="reorganize(item)"
+    [style.top.px]="item.positionX" [style.left.px]="item.positionY"
+    [style.height.px]="item.height" [style.width.px]="item.width"
+    (click)="select(item.text)">{{item.text}}</div>
+</div>

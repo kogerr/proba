@@ -1,0 +1,17 @@
+#frame {
+  position: absolute;
+  background-color: grey;
+  padding: 5px;
+  display: inline-block;
+}
+
+.menu-item {
+  /* display: inline-block; */
+  position: absolute;
+  /* padding: 1em; */
+  /* margin: 2px; */
+  background-color: lightblue;
+  border-radius: 1em;
+  font-family: 'Segoe UI', 'Futuro';
+  text-align: center;
+}
