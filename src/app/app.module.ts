@@ -13,7 +13,7 @@ import { MenuComponent } from './menu.component';
     AppComponent, MenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

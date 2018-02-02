@@ -7,7 +7,7 @@ import { Coordinated } from './coordinated';
   selector: 'menu-box',
   templateUrl: './menu.component.html',
   styleUrls: [ './menu.component.css' ],
-  inputs: ['selected'],
+  inputs: ['selected', 'columns'],
   outputs: ['emitter : selectedChange']
 })
 
@@ -15,6 +15,7 @@ export class MenuComponent {
   columns : number;
   itemNames = ['Home', 'News', 'Forum', 'Account', 'FAQ'];
   emitter : EventEmitter<string> = new EventEmitter<string>();
+  items : Array<MenuItem>;
 
   giveCoordinates = function(array : string[], width : number) : Array<MenuItem> {
     let newArray = new Array<MenuItem>(array.length);
@@ -61,5 +62,7 @@ export class MenuComponent {
     this.emitter.emit(target);
   };
 
-  items = this.giveCoordinates(this.itemNames, 2);
+  ngOnChanges() {
+    this.items = this.giveCoordinates(this.itemNames, this.columns);
+  }
 }
