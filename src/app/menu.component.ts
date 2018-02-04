@@ -62,7 +62,9 @@ export class MenuComponent {
     this.emitter.emit(target);
   };
 
-  ngOnChanges() {
-    this.items = this.giveCoordinates(this.itemNames, this.columns);
+  ngOnChanges(changes) {
+    if(changes.columns) {
+      this.items = this.giveCoordinates(this.itemNames, this.columns);
+    }
   }
 }
