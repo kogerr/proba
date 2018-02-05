@@ -13,6 +13,7 @@ import { Coordinated } from './coordinated';
 
 export class MenuComponent {
   columns : number;
+  selected : string;
   itemNames = ['Home', 'News', 'Forum', 'Account', 'FAQ'];
   emitter : EventEmitter<string> = new EventEmitter<string>();
   items : Array<MenuItem>;
@@ -59,6 +60,7 @@ export class MenuComponent {
   };
 
   select = function(target) : void {
+    this.selected = target;
     this.emitter.emit(target);
   };
 

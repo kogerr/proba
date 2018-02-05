@@ -1,17 +1,22 @@
 #frame {
-  position: absolute;
+  position: relative;
   background-color: grey;
   padding: 5px;
   display: inline-block;
 }
 
 .menu-item {
-  /* display: inline-block; */
   position: absolute;
-  /* padding: 1em; */
-  /* margin: 2px; */
   background-color: lightblue;
   border-radius: 1em;
   font-family: 'Segoe UI', 'Futuro';
   text-align: center;
+}
+
+.current {
+  font-weight: bold;
+}
+
+.menu-item:hover {
+  background-color: #08f;
 }
