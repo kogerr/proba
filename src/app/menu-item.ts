@@ -1,15 +1,15 @@
 import { Coordinated } from './coordinated';
 
 export class MenuItem implements Coordinated {
-  text : string;
-  x : number;
-  y : number;
+  text: string;
+  x: number;
+  y: number;
   positionX: number;
   positionY: number;
-  height : number;
-  width : number;
+  height: number;
+  width: number;
 
-  constructor (text : string, x : number, y : number, height:number, width:number) {
+  constructor (text: string, x: number, y: number, height: number, width: number) {
     this.text = text;
     this.x = x;
     this.y = y;
@@ -25,13 +25,13 @@ export class MenuItem implements Coordinated {
     this.x = target.x;
     this.y = target.y;
     let self = this;
-    self.movement = setInterval(function(){
-      if(self.positionX != (self.x * self.height) || self.positionY != (self.y * self.width)) {
+    self.movement = setInterval(function() {
+      if (self.positionX !== (self.x * self.height) || self.positionY !== (self.y * self.width)) {
         self.positionX = self.positionX + diffX;
         self.positionY = self.positionY + diffY;
       } else {
         clearInterval(self.movement);
       }
-    } ,10);
-  }
+    }, 10);
+  };
 }

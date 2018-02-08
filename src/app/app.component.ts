@@ -7,6 +7,6 @@ import { NgModel } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  c : number = 2;
+  c = 2;
   title = 'app';
 }
