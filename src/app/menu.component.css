@@ -1,8 +1,9 @@
 #frame {
   position: relative;
-  background-color: grey;
+  background-color: #ff7b00;
   padding: 5px;
   display: inline-block;
+  border-radius: .25rem;
 }
 
 .menu-item {

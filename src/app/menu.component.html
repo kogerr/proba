@@ -1,7 +1,7 @@
-<div id="frame">
-    <div *ngFor="let item of items" class="menu-item" (click)="reorganize(item)"
+<div id="frame" [style.height.px]="menuHeight" [style.width.px]="menuWidth">
+    <div *ngFor="let item of items" class="btn btn-primary" (click)="reorganize(item)"
     [style.top.px]="item.positionX" [style.left.px]="item.positionY"
     [style.height.px]="item.height" [style.width.px]="item.width"
-    [class.current]="selected==item.text"
+    [class.active]="selected==item.text" style="position:absolute"
     (click)="select(item.text)">{{item.text}}</div>
 </div>
