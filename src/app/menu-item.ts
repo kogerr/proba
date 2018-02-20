@@ -19,13 +19,15 @@ export class MenuItem implements Coordinated {
     this.positionY = this.y * width;
   }
 
-  moveTo = function(target) {
+  private movement: any;
+
+  moveTo(target): void {
     let diffX = target.x - this.x;
     let diffY = target.y - this.y;
     this.x = target.x;
     this.y = target.y;
     let self = this;
-    self.movement = setInterval(function() {
+    this.movement = setInterval(function() {
       if (self.positionX !== (self.x * self.height) || self.positionY !== (self.y * self.width)) {
         self.positionX = self.positionX + diffX;
         self.positionY = self.positionY + diffY;
@@ -33,5 +35,5 @@ export class MenuItem implements Coordinated {
         clearInterval(self.movement);
       }
     }, 10);
-  };
+  }
 }
